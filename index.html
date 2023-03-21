@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       
-        .parrafo{
+       .parrafo{
             background-color: blue;
         }
 
@@ -19,10 +18,52 @@
             background-color: aqua;
         }
 
+        div[class~=bar]{
+            background-color: grey;
+        }
+
+        div[class^=ba]{
+            background-color: greenyellow;
+        }
+
+        div[class$=ar]{
+            background-color: cyan;
+        }
+
+        div[class*=bor]{
+            background-color: purple;
+        }
+        button:hover{
+            background-color: brown;
+            color: white;
+        }
+
+        input.disable{
+            background-color: bisque
+        }
+        
+        p:first-child{
+            color: black;
+        }
+        
+        p::first-line { 
+            color: black;
+        }
+        p.div{
+            color: darkgoldenrod;
+        }
+
+        .uno,.dos{
+            color: red;
+        }
+
+        p ~ span {
+             color: red;
+        }   
     </style>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque optio ipsum porro, recusandae deserunt officia! Minus ratione consequuntur at, dolor pariatur quidem iste eius porro rem! Expedita at explicabo odit.</p>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque optio ipsum porro, recusandae deserunt officia! Minus ratione consequuntur at, dolor pariatur quidem iste eius porro rem! Expedita at explicabo odit.</p>
     <p title="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis quod quia rerum sit laborum magnam? Eaque, minus facilis. Distinctio repellendus necessitatibus vitae a aperiam dolorem animi amet doloribus quisquam accusamus.</p>
     <p title="parrafo2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur pariatur ipsum ipsam nesciunt harum ullam facere esse error repellat? Saepe numquam magni, dolores asperiores expedita molestias officia sunt temporibus tempore.</p>
     <ul>
@@ -30,7 +71,33 @@
         <li> item 2</li>
         <li> item 3</li>
     </ul>
+    <div class="foo bar">HOLA MUNDO 1</div>
+    <div class="bar baz">HOLA MUNDO 2</div>
 
+    <div class="foo abc_bor_xyz">HOLA MUNDO 1</div>
+    <div class="nmq_bor_ntm baz">HOLA MUNDO 2</div>
 
+    --pseudoclases--
+    <br>
+
+    <button>ENVIAR</button>
+
+    <form>
+        <label for="fecha">fecha</label>
+        <input type="fecha" name="date" id="disable">
+    </form>
+
+    <div>
+        <p>this is select text 1</p>
+        <p>this isnot select text 2</p>
+    </div>-->
+
+    <!--<p class="uno">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quis nulla dolore, ex sunt minima? Consequuntur asperiores, tempore ducimus quasi itaque, eligendi repellendus, in maxime pariatur ratione ipsum debitis ipsam.</p>
+    <div class="dos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi voluptate quaerat corrupti neque tempora maxime voluptatum ut laudantium minus quis nihil quasi, nulla facilis repudiandae inventore id assumenda distinctio amet?</div>
+    -->
+    <span>Este span no es rojo.</span>
+    <p>Aquí hay un párrafo.</p>
+    <code>Aquí hay algo de código.</code>
+    <span>Aquí hay un span. Es rojo porque va precedido de un párrafo y ambos comparten el mismo padre.</span>
 </body>
 </html>
